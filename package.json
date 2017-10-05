@@ -1,0 +1,29 @@
+{
+    "name": "meters-data",
+    "version": "1.0.0",
+    "description": "meters-data project",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Malafeev Evgeny",
+    "license": "ISC",
+    "devDependencies": {
+        "browser-sync": "*",
+        "del": "*",
+        "gulp": "*",
+        "gulp-autoprefixer": "*",
+        "gulp-cache": "*",
+        "gulp-concat": "*",
+        "gulp-cssnano": "*",
+        "gulp-imagemin": "*",
+        "gulp-rename": "*",
+        "gulp-sass": "*",
+        "gulp-uglifyjs": "*",
+        "imagemin-pngquant": "*",
+        "node-normalize-scss": "*"
+    },
+    "dependencies": {
+        "node-sass": "^4.5.3"
+    }
+}
