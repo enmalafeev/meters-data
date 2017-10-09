@@ -7,47 +7,80 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/master.css">
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <title>Показания счетчиков</title>
 </head>
 
 <body>
+
+    <h1 class="header-title">Показания счетчиков</h1>
+
     <div class="container">
-        <div class="col col-lg-12">
-            <h1 class="header-title">Показания счетчиков</h1>
-        </div>
-        <div class="row">
-            <div class="col col-lg-6">
-                <span class="input-title">Тариф дневной</span><br>
-                <input type="number" name="price-day" value="3" id="day-price"><br>
+        <div class="section">
+            <div class="row">
+                <div class="col l6 m6 s12">
+                    <span class="input-title">Тариф дневной</span><br>
+                    <input class="input" type="number" name="price-day" value="3" id="day-price" disabled><br>
+                </div>
+                <div class="col l6 m6 s12">
+                    <span class="input-title">Тариф ночной</span><br>
+                    <input class="input" type="number" name="price-night" value="1.75" id="night-price" disabled><br>
+                </div>
             </div>
-            <div class="col col-lg-6">
-                <span class="input-title">Тариф ночной</span><br>
-                <input type="number" name="price-night" value="1.75" id="night-price"><br>
+
+            <div class="row">
+                <div class="col l6 m6 s12">
+                    <span class="input-title">Показания день</span><br>
+                    <input class="input" type="number" name="value-day" value="10" id="value-day"><br>
+                </div>
+                <div class="col l6 m6 s12">
+                    <span class="input-title">Показания ночь</span><br>
+                    <input class="input" type="number" name="value-night" value="10" id="value-night"><br><br>
+                </div>
             </div>
-            <div class="col col-lg-6">
-                <span class="input-title">Показания день</span><br>
-                <input type="number" name="value-day" value="10" id="value-day"><br>
+
+            <div class="divider"></div>
+
+
+            <div class="section">
+                <h3 class="col-title">кВт за месяц</h3>
+                <div class="row">
+                    <div class="col l6 m6 s12">
+                        <span class="input-title">День</span><br>
+                        <input class="input" type="number" name="value-month-day" value="13823" id="value-month-day"><br>
+                    </div>
+                    <div class="col l6 m6 s12">
+                        <span class="input-title">Ночь</span><br>
+                        <input class="input" type="number" name="value-month-night" value="3189" id="value-month-night"><br>
+                    </div>
+                </div>
             </div>
-            <div class="col col-lg-6">
-                <span class="input-title">Показания ночь</span><br>
-                <input type="number" name="value-night" value="10" id="value-night"><br><br>
+
+            <div class="divider"></div>
+
+            <div class="section">
+                <div class="row">
+                    <div class="col l12 m12 s12">
+                        <h3 class="col-title">Итого к оплате</h3>
+                        <button class="btn">Посчитать</button>
+                        <div id="result"></div>
+                        <span class="ruble">Рублей</span>
+                    </div>
+
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <button class="btn">Посчитать</button>
-            </div>
+
+            <div class="divider"></div>
+
         </div>
 
-        <div id="result"></div>
-    </div>
 
-    <script src="js/script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/materialize.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+
+        <script src="js/script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/materialize.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
 
 </body>
 

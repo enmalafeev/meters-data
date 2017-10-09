@@ -1,5 +1,29 @@
-.header-title {
+.header-title,
+.col-title {
   text-align: center; }
 
 .input-title {
   font-weight: 500; }
+
+input {
+  -webkit-border-radius: 5px;
+          border-radius: 5px; }
+
+.col {
+  text-align: center; }
+
+#result {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 25px; }
+
+.ruble {
+  font-size: 20px;
+  font-weight: 800; }
+
+.input {
+  width: 250px;
+  height: 40px; }
+
+.input-title {
+  font-size: 1.6em; }
