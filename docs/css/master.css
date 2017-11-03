@@ -31,7 +31,8 @@
   margin-left: .5em; }
 
 .waves-light {
-  margin-left: 3.8em; }
+  margin-left: -webkit-calc(1/8 * 100%);
+  margin-left: calc(1/8 * 100%); }
 
 .red {
   font-size: 2em !important; }

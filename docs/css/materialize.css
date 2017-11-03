@@ -5670,7 +5670,8 @@ button.btn-floating {
   margin-top: .75em;
   margin-bottom: .5em; }
 
-.picker__table th, .picker__table td {
+.picker__table th,
+.picker__table td {
   text-align: center; }
 
 .picker__table td {
@@ -5927,7 +5928,9 @@ button.btn-floating {
   text-align: right;
   padding: 5px 10px; }
 
-.picker__close, .picker__today, .picker__clear {
+.picker__close,
+.picker__today,
+.picker__clear {
   font-size: 1.1rem;
   padding: 0 1rem;
   color: #26a69a; }
@@ -5951,7 +5954,9 @@ button.btn-floating {
   border-right: 0;
   border-left: 0.75em solid #676767; }
 
-button.picker__today:focus, button.picker__clear:focus, button.picker__close:focus {
+button.picker__today:focus,
+button.picker__clear:focus,
+button.picker__close:focus {
   background-color: #a1ded8; }
 
 /* ==========================================================================
