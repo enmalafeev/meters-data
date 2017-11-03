@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/master.css">
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <title>Показания счетчиков</title>
 </head>
 
@@ -29,18 +32,34 @@
             </div>
 
             <div class="row l12 m12 s12">
-                <a class="btn-floating btn-large waves-effect waves-light red">+</a>
-                <span class="input-title input-title__pad">Mecяц</span>
+                <!-- <a class="btn-floating btn-large waves-effect waves-light red">+</a> -->
+                <div class="col l12 m6 s12">
+                    <span class="input-title">Mecяц</span><br>
+                    <input class="input" type="text" id="datepicker">
+                </div>
             </div>
 
             <div class="row">
+                <h3 class="col-title">Показания прошлый месяц</h3>
                 <div class="col l6 m6 s12">
                     <span class="input-title">Показания день</span><br>
-                    <input class="input" type="number" name="value-day" value="10" id="value-day"><br>
+                    <input class="input" type="number" name="value-day-prev" value="13823" id="value-day-prev"><br>
                 </div>
                 <div class="col l6 m6 s12">
                     <span class="input-title">Показания ночь</span><br>
-                    <input class="input" type="number" name="value-night" value="10" id="value-night"><br><br>
+                    <input class="input" type="number" name="value-night-prev" value="3189" id="value-night-prev"><br><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <h3 class="col-title">Показания текущий месяц</h3>
+                <div class="col l6 m6 s12">
+                    <span class="input-title">Показания день</span><br>
+                    <input class="input" type="number" name="value-day-current" value="13885" id="value-day-current"><br>
+                </div>
+                <div class="col l6 m6 s12">
+                    <span class="input-title">Показания ночь</span><br>
+                    <input class="input" type="number" name="value-night-current" value="3201" id="value-night-current"><br><br>
                 </div>
             </div>
 
@@ -52,11 +71,11 @@
                 <div class="row">
                     <div class="col l6 m6 s12">
                         <span class="input-title">День</span><br>
-                        <input class="input" type="number" name="value-month-day" value="13823" id="value-month-day"><br>
+                        <input class="input" type="number" name="value-month-day" value="" id="value-month-day"><br>
                     </div>
                     <div class="col l6 m6 s12">
                         <span class="input-title">Ночь</span><br>
-                        <input class="input" type="number" name="value-month-night" value="3189" id="value-month-night"><br>
+                        <input class="input" type="number" name="value-month-night" value="" id="value-month-night"><br>
                     </div>
                 </div>
             </div>
@@ -78,8 +97,6 @@
             <div class="divider"></div>
 
         </div>
-
-
 
 
         <script src="js/script.js"></script>
