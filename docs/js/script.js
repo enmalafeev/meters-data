@@ -1,20 +1,20 @@
 $("#datepicker").datepicker();
 
 // Сохранение данных input в localstorage
-// var elements = document.querySelectorAll('input');
+var elements = document.querySelectorAll('input');
 
-// function checkValidity() {};
+function checkValidity() {};
 
-// for (i = 0; i < elements.length; i++) {
-//     (function(element) {
-//         var id = element.getAttribute('id');
-//         element.value = sessionStorage.getItem(id); // обязательно наличие у элементов id
-//         element.oninput = function() {
-//             sessionStorage.setItem(id, element.value);
-//             checkValidity();
-//         };
-//     })(elements[i]);
-// }
+for (i = 0; i < elements.length; i++) {
+    (function(element) {
+        var id = element.getAttribute('id');
+        element.value = localStorage.getItem(id); // обязательно наличие у элементов id
+        element.oninput = function() {
+            localStorage.setItem(id, element.value);
+            checkValidity();
+        };
+    })(elements[i]);
+}
 
 $(document).ready(function() {
     function sum(num1, num2) {
