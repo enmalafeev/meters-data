@@ -44,11 +44,14 @@
                 <h3 class="col-title">Показания прошлый месяц</h3>
                 <div class="col l6 m6 s12">
                     <span class="input-title">Показания день</span><br>
-                    <input class="input" type="number" name="value-day-prev" value="" id="value-day-prev"><br>
+                    <input class="input" type="number" name="value-day-prev" value="" id="value-day-prev" onchange="getValueDayMonth()"
+                    ><br>
                 </div>
                 <div class="col l6 m6 s12">
                     <span class="input-title">Показания ночь</span><br>
-                    <input class="input" type="number" name="value-night-prev" value="" id="value-night-prev"><br><br>
+                    <input class="input" type="number" name="value-night-prev" value="" id="value-night-prev" onchange="getValueNightMonth()">
+                    <br>
+                    <br>
                 </div>
             </div>
 
@@ -56,11 +59,15 @@
                 <h3 class="col-title">Показания текущий месяц</h3>
                 <div class="col l6 m6 s12">
                     <span class="input-title">Показания день</span><br>
-                    <input class="input" type="number" name="value-day-current" value="" id="value-day-current" autofocus><br>
+                    <input class="input" type="number" name="value-day-current" value="" id="value-day-current" onchange="getValueDayMonth()"
+                    autofocus>
+                    <br>
                 </div>
                 <div class="col l6 m6 s12">
                     <span class="input-title">Показания ночь</span><br>
-                    <input class="input" type="number" name="value-night-current" value="" id="value-night-current"><br><br>
+                    <input class="input" type="number" name="value-night-current" value="" id="value-night-current" onchange="getValueNightMonth()">
+                    <br>
+                    <br>
                 </div>
             </div>
 

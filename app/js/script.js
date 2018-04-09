@@ -16,57 +16,56 @@ for (i = 0; i < elements.length; i++) {
     })(elements[i]);
 }
 
-$(document).ready(function() {
-    function sum(num1, num2) {
-        return num1 * num2;
-    }
+function sum(num1, num2) {
+    return num1 * num2;
+}
 
-    function add(num1, num2) {
-        return num1 + num2;
-    }
+function add(num1, num2) {
+    return num1 + num2;
+}
 
-    function sub(num1, num2) {
-        return num1 - num2;
-    }
+function sub(num1, num2) {
+    return num1 - num2;
+}
 
-    function getValue(id) {
-        var value = document.getElementById(id).value;
-        return value;
-    }
+function getValue(id) {
+    var value = document.getElementById(id).value;
+    return value;
+}
 
-    function getResult(num1, num2, num3, num4) {
-        var result = (num1 * num2) + (num3 * num4);
-        return result;
-    }
+function getResult(num1, num2, num3, num4) {
+    var result = (num1 * num2) + (num3 * num4);
+    return result;
+}
 
+function getValueDayMonth() {
+    var prev = document.getElementById("value-day-prev").value;
+    var cur = document.getElementById("value-day-current").value;
+    var sub = cur - prev;
+    document.getElementById("value-month-day").value = sub;
+}
 
+function getValueNightMonth() {
+    var prev = document.getElementById("value-night-prev").value;
+    var cur = document.getElementById("value-night-current").value;
+    var sub = cur - prev;
+    document.getElementById("value-month-night").value = sub;
+}
+
+var count = document.querySelector(".btn");
+
+count.addEventListener('click', function () {
+    var day_price = getValue("day-price");
+    var night_price = getValue("night-price");
+
+    var value_month_day = getValue("value-month-day");
+    var value_month_night = getValue("value-month-night");
+    var res = document.querySelector("#result");
     
-
-    $("#value-day-current").on('input', function() {
-        var value_day_prev = getValue("value-day-prev");
-        var value_day_current = getValue("value-day-current");
-        $("#value-month-day").val(sub(value_day_current, value_day_prev));
-    });
-
-    $("#value-night-current").on('input', function() {
-        var value_night_prev = getValue("value-night-prev");
-        var value_night_current = getValue("value-night-current");
-        $("#value-month-night").val(sub(value_night_current, value_night_prev));
-    });
-
-    var count = document.querySelector(".btn");
-
-    count.addEventListener('click', function () {
-        var day_price = getValue("day-price");
-        var night_price = getValue("night-price");
-
-        var value_month_day = getValue("value-month-day");
-        var value_month_night = getValue("value-month-night");
-
-        $("#result").text(getResult(day_price, value_month_day, night_price, value_month_night));
-    });
-
+    res.innerHTML = getResult(day_price, value_month_day, night_price, value_month_night);
 });
+
+
 
 
 
