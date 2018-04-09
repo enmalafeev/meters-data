@@ -1,5 +1,9 @@
 $("#datepicker").datepicker();
 
+var dateFormat = $("#datepicker").datepicker("option", "dateFormat");
+
+$("#datepicker").datepicker("option", "dateFormat", "dd-mm-yy");
+
 // Сохранение данных input в localstorage
 var elements = document.querySelectorAll('input');
 
@@ -50,6 +54,11 @@ function getValueNightMonth() {
     var cur = document.getElementById("value-night-current").value;
     var sub = cur - prev;
     document.getElementById("value-month-night").value = sub;
+}
+
+function getDate() {
+    var date = document.getElementById("datepicker").value;
+    console.log(date);
 }
 
 var count = document.querySelector(".btn");
