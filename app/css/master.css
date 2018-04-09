@@ -36,3 +36,10 @@
 
 .red {
   font-size: 2em !important; }
+
+.table-res {
+  border: 2px solid #000; }
+
+.table-head,
+.table-data {
+  border: 1px solid #000; }

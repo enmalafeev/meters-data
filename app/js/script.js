@@ -55,23 +55,26 @@ function getValueNightMonth() {
     var sub = cur - prev;
     document.getElementById("value-month-night").value = sub;
 }
-
-function getDate() {
-    var date = document.getElementById("datepicker").value;
-    console.log(date);
-}
-
+  
 var count = document.querySelector(".btn");
 
 count.addEventListener('click', function () {
     var day_price = getValue("day-price");
     var night_price = getValue("night-price");
 
+    var datePick = document.getElementById("datepicker").value;
     var value_month_day = getValue("value-month-day");
     var value_month_night = getValue("value-month-night");
     var res = document.querySelector("#result");
+
+    var date = document.getElementsByClassName("date");
+    var day = document.getElementsByClassName("day");
+    var night = document.getElementsByClassName("night");
+    var result = document.getElementsByClassName("res");
+    
     
     res.innerHTML = getResult(day_price, value_month_day, night_price, value_month_night);
+
 });
 
 
