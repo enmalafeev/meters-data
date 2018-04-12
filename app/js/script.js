@@ -67,13 +67,17 @@ count.addEventListener('click', function () {
     var value_month_night = getValue("value-month-night");
     var res = document.querySelector("#result");
 
-    var date = document.getElementsByClassName("date");
-    var day = document.getElementsByClassName("day");
-    var night = document.getElementsByClassName("night");
-    var result = document.getElementsByClassName("res");
+    var date = document.querySelector(".date");
+    var day = document.querySelector(".day");
+    var night = document.querySelector(".night");
+    var result = document.querySelector(".res");
     
     
     res.innerHTML = getResult(day_price, value_month_day, night_price, value_month_night);
+    result.innerHTML = getResult(day_price, value_month_day, night_price, value_month_night);
+    date.innerHTML = datePick;
+    day.innerHTML = value_month_day;
+    night.innerHTML = value_month_night;
 
 });
 
