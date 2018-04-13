@@ -59,6 +59,23 @@ function getValueNightMonth() {
 var count = document.querySelector(".btn");
 
 count.addEventListener('click', function () {
+
+    var tbody = document.getElementsByTagName("TBODY")[0];
+    var row = document.createElement("TR");
+    var td1 = document.createElement("TD");
+    var td2 = document.createElement("TD");
+    var td3 = document.createElement("TD");
+    var td4 = document.createElement("TD");
+    
+    tbody.appendChild(row);
+    row.appendChild(td1);
+    row.appendChild(td2);
+    row.appendChild(td3);
+    row.appendChild(td4);
+
+   
+    
+
     var day_price = getValue("day-price");
     var night_price = getValue("night-price");
 
@@ -67,17 +84,22 @@ count.addEventListener('click', function () {
     var value_month_night = getValue("value-month-night");
     var res = document.querySelector("#result");
 
-    var date = document.querySelector(".date");
-    var day = document.querySelector(".day");
-    var night = document.querySelector(".night");
-    var result = document.querySelector(".res");
+    // var date = document.querySelector(".date");
+    // var day = document.querySelector(".day");
+    // var night = document.querySelector(".night");
+    // var result = document.querySelector(".res");
     
     
     res.innerHTML = getResult(day_price, value_month_day, night_price, value_month_night);
-    result.innerHTML = getResult(day_price, value_month_day, night_price, value_month_night);
-    date.innerHTML = datePick;
-    day.innerHTML = value_month_day;
-    night.innerHTML = value_month_night;
+    td4.innerHTML = getResult(day_price, value_month_day, night_price, value_month_night);
+    td1.innerHTML = datePick;
+    td2.innerHTML = value_month_day;
+    td3.innerHTML = value_month_night;
+
+     row.appendChild(td1);
+     row.appendChild(td2);
+     row.appendChild(td3);
+     row.appendChild(td4);
 
 });
 
