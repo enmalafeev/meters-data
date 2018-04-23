@@ -73,9 +73,6 @@ count.addEventListener('click', function () {
     row.appendChild(td3);
     row.appendChild(td4);
 
-   
-    
-
     var day_price = getValue("day-price");
     var night_price = getValue("night-price");
 
@@ -84,24 +81,21 @@ count.addEventListener('click', function () {
     var value_month_night = getValue("value-month-night");
     var res = document.querySelector("#result");
 
-    // var date = document.querySelector(".date");
-    // var day = document.querySelector(".day");
-    // var night = document.querySelector(".night");
-    // var result = document.querySelector(".res");
-    
-    
-    res.innerHTML = getResult(day_price, value_month_day, night_price, value_month_night);
-    td4.innerHTML = getResult(day_price, value_month_day, night_price, value_month_night);
     td1.innerHTML = datePick;
     td2.innerHTML = value_month_day;
     td3.innerHTML = value_month_night;
+    td4.innerHTML = getResult(day_price, value_month_day, night_price, value_month_night);
+    res.innerHTML = getResult(day_price, value_month_day, night_price, value_month_night);
 
-     row.appendChild(td1);
-     row.appendChild(td2);
-     row.appendChild(td3);
-     row.appendChild(td4);
-
+    row.appendChild(td1);
+    row.appendChild(td2);
+    row.appendChild(td3);
+    row.appendChild(td4);
 });
+
+function delRowTable() {
+    document.getElementsByTagName("TBODY")[0].deleteRow(-1);
+}
 
 
 
